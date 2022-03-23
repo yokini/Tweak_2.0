@@ -909,6 +909,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6741399282618035193, guid: 1236bf4fc7a674b0badf76561a567a3e,
         type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -6741399282618035193, guid: 1236bf4fc7a674b0badf76561a567a3e,
+        type: 3}
       propertyPath: m_CollisionDetection
       value: 3
       objectReference: {fileID: 0}

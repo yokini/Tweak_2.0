@@ -8,10 +8,15 @@ public class Boomerang : MonoBehaviour
 
     public GameObject player;
     public GameObject boomerang;
+    private Vector2 screenBound;
+
+    public float maximumDistance = 40f;
+
+    public float rotationSpeed = 5000f;
 
     Transform itemRotate;
 
-    public float throwSpeed = 5f;
+    public float throwSpeed = 10f;
 
     Vector3 locationInFrontOfPlayer;
 
@@ -35,6 +40,8 @@ public class Boomerang : MonoBehaviour
 
         locationOfPlayer = new Vector3(player.transform.position.x, player.transform.position.y, 0);
 
+        screenBound = Camera.main.ScreenToWorldPoint (new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z ));
+
         
 
         
@@ -57,16 +64,16 @@ public class Boomerang : MonoBehaviour
     {
         
 
-        itemRotate.transform.Rotate(0, 0, Time.deltaTime * 2000);
+        itemRotate.transform.Rotate(0, 0, Time.deltaTime * rotationSpeed);
 
         if (go)
         {
-            transform.position = Vector3.MoveTowards(transform.position, locationInFrontOfPlayer, Time.deltaTime * 20);
+            transform.position = Vector3.MoveTowards(transform.position, locationInFrontOfPlayer, maximumDistance * Time.deltaTime);
         }
 
         if (!go)
         {
-            transform.position = Vector3.MoveTowards(transform.position, locationOfPlayer, Time.deltaTime * 20);
+            transform.position = Vector3.MoveTowards(transform.position, locationOfPlayer, maximumDistance * Time.deltaTime);
         }
 
         if (!go && Vector3.Distance(player.transform.position, transform.position) < 2)
