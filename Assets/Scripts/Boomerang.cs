@@ -16,7 +16,7 @@ public class Boomerang : MonoBehaviour
 
     Transform itemRotate;
 
-    public float throwSpeed = 10f;
+    public float throwSpeed = 5f;
 
     Vector3 locationInFrontOfPlayer;
 
@@ -33,9 +33,9 @@ public class Boomerang : MonoBehaviour
 
         itemRotate = gameObject.transform;
 
-        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 mousePosition = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z);
 
-        locationInFrontOfPlayer = new Vector3(player.transform.position.x, player.transform.position.y, 0) + mousePosition * throwSpeed;
+        locationInFrontOfPlayer =  mousePosition * throwSpeed;
        
 
         locationOfPlayer = new Vector3(player.transform.position.x, player.transform.position.y, 0);
@@ -44,9 +44,14 @@ public class Boomerang : MonoBehaviour
 
         
 
-        
+        if (Input.GetMouseButtonDown(0)) 
+        {
+            StartCoroutine(Boom());
 
-        StartCoroutine(Boom());
+            Debug.Log("Clicked " + mousePosition);
+        }
+
+        
         
     }
 
@@ -54,7 +59,7 @@ public class Boomerang : MonoBehaviour
     {
         go = true;
 
-        yield return new WaitForSeconds(1/2f);
+        yield return new WaitForSeconds(1f);
 
         go = false;
     }
