@@ -10,9 +10,9 @@ public class Boomerang : MonoBehaviour
     public GameObject boomerang;
     private Vector2 screenBound;
 
-    public float maximumDistance = 40f;
+    public float maximumDistance = Screen.height;
 
-    public float rotationSpeed = 5000f;
+    public float rotationSpeed = 2000f;
 
     Transform itemRotate;
 
@@ -20,20 +20,24 @@ public class Boomerang : MonoBehaviour
 
     Vector3 locationInFrontOfPlayer;
 
-    Vector3 locationInSideOfPlayer;
-
     Vector3 locationOfPlayer;
 
     Vector3 mousePosition;
 
-    // Start is called before the first frame update
-    async void Start()
+    Camera cam;
+
+    Event  currentEvent = Event.current;
+
+    Vector2 mousePos = new Vector2();
+
+    
+    void Start()
     {
         go = false;
 
         itemRotate = gameObject.transform;
 
-        Vector3 mousePosition = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z);
+        Vector3 mousePosition = Camera.main.ScreenToWorldPoint(new Vector3 (Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z));
 
         locationInFrontOfPlayer =  mousePosition * throwSpeed;
        
@@ -41,6 +45,9 @@ public class Boomerang : MonoBehaviour
         locationOfPlayer = new Vector3(player.transform.position.x, player.transform.position.y, 0);
 
         screenBound = Camera.main.ScreenToWorldPoint (new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z ));
+
+        
+        
 
         
 
@@ -59,7 +66,7 @@ public class Boomerang : MonoBehaviour
     {
         go = true;
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1/2f);
 
         go = false;
     }
@@ -81,10 +88,14 @@ public class Boomerang : MonoBehaviour
             transform.position = Vector3.MoveTowards(transform.position, locationOfPlayer, maximumDistance * Time.deltaTime);
         }
 
-        if (!go && Vector3.Distance(player.transform.position, transform.position) < 2)
+        if (!go && Vector3.Distance(player.transform.position, transform.position) < 1/2)
         {
             Destroy(this.gameObject);
         }
+
+        
         
     }
+
+   
 }
