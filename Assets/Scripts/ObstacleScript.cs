@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class ObstacleScript : MonoBehaviour
 {
-    private GameObject player;
-    // Start is called before the first frame update
-    void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player");
-    }
+    public float speed;
 
-    // Update is called once per frame
+     void Update()
+    {
+        transform.Translate(Vector2.left * Time.deltaTime * speed);
+     
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "collider")
@@ -21,8 +20,7 @@ public class ObstacleScript : MonoBehaviour
 
         else if (collision.tag == "Player")
         {
-            Destroy(player.gameObject);
+            Destroy(collision.gameObject);
         }
-
     }
 }

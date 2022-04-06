@@ -7,6 +7,7 @@ public class PlayerScript : MonoBehaviour
     public float playerSpeed;
     private Rigidbody2D rb;
     private Vector2 playerDirection;
+    public GameManagerScript gm;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,15 +26,9 @@ public class PlayerScript : MonoBehaviour
         rb.velocity = new Vector2(0, playerDirection.y * playerSpeed);
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnDestroy()
     {
-   
-        if (collision.gameObject.tag == "collider")
-        {
-          
-            Debug.Log("hit");
-        }
-
-
+        print("dead!");
+      //  gm.OnPlayerDestroyed();
     }
 }
