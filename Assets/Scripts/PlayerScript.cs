@@ -12,23 +12,24 @@ public class PlayerScript : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+     
     }
 
     // Update is called once per frame
     void Update()
     {
         float directionY = Input.GetAxisRaw("Vertical");
-        playerDirection = new Vector2(0, directionY).normalized;
+        playerDirection = new Vector2(0, directionY);
     }
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(0, playerDirection.y * playerSpeed);
+        rb.velocity = playerDirection * playerSpeed;
     }
 
     void OnDestroy()
     {
-        print("dead!");
-      //  gm.OnPlayerDestroyed();
+        Debug.Log("Dead");
+        gm.OnPlayerDestroyed();
     }
 }

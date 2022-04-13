@@ -17,11 +17,13 @@ public class GameManagerScript : MonoBehaviour
 
     public void OnPlayerDestroyed()
     {
-       restartPanel.SetActive(true);
-       
-        if (scoreText.text == "0")
-       {
-        WinPanel.SetActive(true);
-       }
+        //restartPanel.SetActive(true);
+        Debug.Log("Destroyed");
+    }
+
+    public void OnTimerEnd()
+    {
+        // WinPanel.SetActive(true);
+        Debug.Log("Win");
     }
 }

@@ -6,26 +6,28 @@ public class ScoreManager : MonoBehaviour
 {
     public Text scoreText;
     private float score;
-    private GameObject player;
+    public GameManagerScript gm;
 
     // Start is called before the first frame update
     void Start()
     {
         score = 11;
-        player = GameObject.FindGameObjectWithTag("Player");
     }
     // Update is called once per frame
     void Update()
     {
-        if(player != null && score>0)
+        if (score > 0)
         {
-            score -= 1 * Time.deltaTime;
-            scoreText.text = ((int)score).ToString();
+            score -= Time.deltaTime;
+        }
+        else
+        {
+            score = 0;
+            Debug.Log("Time's up");
+            gm.OnTimerEnd();
+            
         }
 
-        if (score == 0)
-        {
-            Destroy(player.gameObject);
-        }
+        scoreText.text = ((int)score).ToString();
     }
 }
