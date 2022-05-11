@@ -27,6 +27,11 @@ public class WeaponMovement : MonoBehaviour
     {
         Debug.Log(collider.name);
         Destroy(gameObject);
+
+        if (collider.tag == "Enemy") 
+        {
+            Destroy(collider.gameObject);
+        }
     }
 
     

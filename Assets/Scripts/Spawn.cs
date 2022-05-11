@@ -8,7 +8,7 @@ public class Spawn : MonoBehaviour
 
     public GameObject cloud;
 
-    private float spawnDelay = 4f;
+    private float spawnDelay = 2f;
 
     
 
@@ -34,7 +34,7 @@ public class Spawn : MonoBehaviour
     private void SpawnObject()
     {
         nextSpawnTime = Time.time + spawnDelay;
-        Vector3 randomCloud = new Vector3(Random.Range(0, 10), Random.Range(5, 10)*2, 0);
+        Vector3 randomCloud = new Vector3(Random.Range(0, 20), Random.Range(4, 10), 0);
         Instantiate(cloud, randomCloud, Quaternion.identity);
     }
 
