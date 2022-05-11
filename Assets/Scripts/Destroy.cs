@@ -8,6 +8,8 @@ public class Destroy : MonoBehaviour
     {         
             Destroy(collision.gameObject);
 
+            Debug.Log("Hit");
+
     } 
 
     private void OnTriggerEnter(Collider other)
@@ -16,7 +18,7 @@ public class Destroy : MonoBehaviour
         {
             Destroy(other.gameObject);
 
-           print("Hit");
+           Debug.Log("Hit");
         }
     } 
 

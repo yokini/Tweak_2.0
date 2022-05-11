@@ -6,14 +6,24 @@ public class PlayerMovement : MonoBehaviour
 {
     public float rotationSpeed;
 
-    public GameObject boomer;
+    
 
-    private Transform playerRotation;
+    
 
     public Transform playerTip;
 
     private Vector2 lookDirection;
     private float lookAngle;
+
+    public float moveSpeed;
+    private float horizontalValue;
+    private float verticalValue;
+
+    public Rigidbody rb;
+
+    
+
+    
 
     
 
@@ -21,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         
+
+        rb = GetComponent<Rigidbody>(); 
       
     }
 
@@ -33,46 +45,24 @@ public class PlayerMovement : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(0f, 0f, lookAngle - 90f);
 
-        /*float horizontalValue = Input.GetAxis("Horizontal");
-
-        if (horizontalValue > 0)
-        {
-            transform.Rotate(0, 0, rotationSpeed * Time.deltaTime * -1);
-        }
-
-        else if (horizontalValue < 0)
-        {
-            transform.Rotate(0, 0, rotationSpeed * Time.deltaTime );
-        }
-
-        else
-        {
-            transform.Rotate(0, 0, 0);
-        } */
+        horizontalValue = Input.GetAxis("Horizontal")*moveSpeed;
+        verticalValue = Input.GetAxis("Vertical")*moveSpeed;
 
         
-        if (Input.GetMouseButtonDown(0))
-        {
-            ThrowBoom();
 
-        }
-        
-            
-
-        
     }
 
-    public void ThrowBoom() 
-        {
-            
-            GameObject clone;
-
-
-            clone = Instantiate(boomer, playerTip.position, boomer.transform.rotation);  
-
-        }
-
     
+
+      
+
+     private void FixedUpdate() 
+    {
+        Vector2 velocity = rb.velocity;
+        velocity.x = horizontalValue;
+        velocity.y = verticalValue;
+        rb.velocity = velocity;
+    } 
 }
 
 

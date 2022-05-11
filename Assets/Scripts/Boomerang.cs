@@ -26,9 +26,8 @@ public class Boomerang : MonoBehaviour
 
     Camera cam;
 
-    Event  currentEvent = Event.current;
 
-    Vector2 mousePos = new Vector2();
+
 
     
     void Start()
@@ -78,7 +77,12 @@ public class Boomerang : MonoBehaviour
 
         itemRotate.transform.Rotate(0, 0, Time.deltaTime * rotationSpeed);
 
-        if (go)
+        if (Input.GetMouseButtonDown(0))
+        {
+            transform.position = Vector3.MoveTowards(transform.position, locationInFrontOfPlayer, maximumDistance * Time.deltaTime);
+        }
+
+        /*if (go)
         {
             transform.position = Vector3.MoveTowards(transform.position, locationInFrontOfPlayer, maximumDistance * Time.deltaTime);
         }
@@ -91,7 +95,7 @@ public class Boomerang : MonoBehaviour
         if (!go && Vector3.Distance(player.transform.position, transform.position) < 1/2)
         {
             Destroy(this.gameObject);
-        }
+        }*/
 
         
         
