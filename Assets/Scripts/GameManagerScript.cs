@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -17,13 +15,13 @@ public class GameManagerScript : MonoBehaviour
 
     public void OnPlayerDestroyed()
     {
-        //restartPanel.SetActive(true);
+        restartPanel.SetActive(true);
         Debug.Log("Destroyed");
     }
 
     public void OnTimerEnd()
     {
-        // WinPanel.SetActive(true);
+        WinPanel.SetActive(true);
         Debug.Log("Win");
     }
 }

@@ -6,11 +6,11 @@ public class ObstacleScript : MonoBehaviour
 {
     public float speed;
 
-     void Update()
+    void Update()
     {
         transform.Translate(Vector2.left * Time.deltaTime * speed);
-     
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "collider")
