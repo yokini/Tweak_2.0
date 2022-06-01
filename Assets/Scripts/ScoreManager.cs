@@ -11,6 +11,7 @@ public class ScoreManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gm = FindObjectOfType<GameManagerScript>();
         score = 11;
     }
     // Update is called once per frame
@@ -23,7 +24,6 @@ public class ScoreManager : MonoBehaviour
         else
         {
             score = 0;
-            Debug.Log("Time's up");
             gm.OnTimerEnd();
             
         }
