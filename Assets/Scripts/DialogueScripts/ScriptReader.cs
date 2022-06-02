@@ -14,6 +14,7 @@ public class ScriptReader : MonoBehaviour
     public TMP_Text dialogueText;
     public TMP_Text nameTag;
 
+    public Image characterIcon;
     void Start()
     {
         LoadStory();
@@ -31,6 +32,10 @@ public class ScriptReader : MonoBehaviour
     {
         storyScript = new Story(inkJsonFile.text);
         storyScript.BindExternalFunction("Name", (string charName) => ChangeName(charName));
+        storyScript.BindExternalFunction("Icon", (string charName) => ChangeCharacterIcon(charName));
+
+        DisplayNextLine();
+
     }
 
     public void DisplayNextLine()
@@ -57,4 +62,12 @@ public class ScriptReader : MonoBehaviour
         nameTag.text = characterName;
 
     }
+
+    public void ChangeCharacterIcon(string name)
+    {
+        var charIcon = Resources.Load<Sprite>("charactericons/" + name);
+        characterIcon.sprite = charIcon;
+    }
+
+
 }
