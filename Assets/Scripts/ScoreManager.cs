@@ -12,7 +12,7 @@ public class ScoreManager : MonoBehaviour
     void Start()
     {
         gm = FindObjectOfType<GameManagerScript>();
-        score = 11;
+        score = 31;
     }
     // Update is called once per frame
     void Update()
@@ -21,13 +21,23 @@ public class ScoreManager : MonoBehaviour
         {
             score -= Time.deltaTime;
         }
+
         else
         {
             score = 0;
             gm.OnTimerEnd();
-            
         }
 
-        scoreText.text = ((int)score).ToString();
+        if(gm.TimerOngoing == false)
+        {
+            scoreText.text = null;
+        }
+
+        else
+        {
+            scoreText.text = ((int)score).ToString();
+        }
+
+        
     }
 }

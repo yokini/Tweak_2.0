@@ -152,7 +152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0ee380c3c24c24d9d11cbe2abd110e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 10
   gm: {fileID: 0}
 --- !u!50 &114399371
 Rigidbody2D:
@@ -343,6 +342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 340467183}
+  gm: {fileID: 0}
 --- !u!114 &340467183
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -808,8 +808,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5886b6e39b289b9489565dd0a9874ea3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obstacle: {fileID: 3968423983087940416, guid: 7a87c47313cf2144f8a0b222581dab1b,
-    type: 3}
+  obstacles:
+  - {fileID: 865202892854477448, guid: d57e8630489a10a42ac6fa3cf2be71b5, type: 3}
+  - {fileID: 8684980824125267480, guid: c29f644bd0a862641921fd9acdc09e1d, type: 3}
+  - {fileID: 3968423983087940416, guid: 7a87c47313cf2144f8a0b222581dab1b, type: 3}
   maxX: 14
   minX: 11
   maxY: 4
@@ -1063,7 +1065,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Next
+  m_Text: Wake Up
 --- !u!222 &1025084572
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1160,8 +1162,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7cf1b295f1fcbd43a5e1ac81066dc0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundSpeed: 0.5
   backgroundRenderer: {fileID: 1448529325}
+  gm: {fileID: 0}
 --- !u!23 &1448529325
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1356,6 +1358,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1868652854}
   - component: {fileID: 1868652855}
+  - component: {fileID: 1868652853}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1363,6 +1366,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1868652853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868652852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a04a85c7e9e2464409bde04b7f8746f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 0
 --- !u!4 &1868652854
 Transform:
   m_ObjectHideFlags: 0
@@ -1392,6 +1408,9 @@ MonoBehaviour:
   restartPanel: {fileID: 983252829}
   WinPanel: {fileID: 247770558}
   scoreText: {fileID: 340467183}
+  instance: {fileID: 0}
+  TimerOngoing: 0
+  hasWon: 0
 --- !u!1 &1913875874
 GameObject:
   m_ObjectHideFlags: 0
@@ -1591,7 +1610,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Restart
+  m_Text: Retry
 --- !u!222 &2130688481
 CanvasRenderer:
   m_ObjectHideFlags: 0
