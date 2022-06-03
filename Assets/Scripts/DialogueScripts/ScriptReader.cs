@@ -14,7 +14,7 @@ public class ScriptReader : MonoBehaviour
     public TMP_Text dialogueText;
     public TMP_Text nameTag;
 
-    public Image characterIcon;
+    //public Image characterIcon;
     void Start()
     {
         LoadStory();
@@ -32,9 +32,11 @@ public class ScriptReader : MonoBehaviour
     {
         storyScript = new Story(inkJsonFile.text);
         storyScript.BindExternalFunction("Name", (string charName) => ChangeName(charName));
-        storyScript.BindExternalFunction("Icon", (string charName) => ChangeCharacterIcon(charName));
-
+        //storyScript.BindExternalFunction("Icon", (string charName) => ChangeCharacterIcon(charName));
+        storyScript.BindExternalFunction("CharAnimation", (string charName, string animName) => playCharacterAnim(charName, animName));
         DisplayNextLine();
+
+     
 
     }
 
@@ -52,7 +54,7 @@ public class ScriptReader : MonoBehaviour
 
         else
         {
-            dialogueText.text = "end of this convo";
+            dialogueText.text = "end convo";
         }
     }
 
@@ -63,11 +65,16 @@ public class ScriptReader : MonoBehaviour
 
     }
 
-    public void ChangeCharacterIcon(string name)
-    {
-        var charIcon = Resources.Load<Sprite>("charactericons/" + name);
-        characterIcon.sprite = charIcon;
-    }
+    //public void ChangeCharacterIcon(string name)
+    //{
+    //    var charIcon = Resources.Load<Sprite>("charactericons/" + name);
+    //    characterIcon.sprite = charIcon;
+    // }
 
+    public void playCharacterAnim(string charName, string animName)
+    {
+        GameObject character = GameObject.Find(charName);
+        character.GetComponent<CharacterAnimation>().CharacterAnimations(animName);
+    }
 
 }
