@@ -28,7 +28,7 @@
 
     public void WinScore()
     {
-        if (score >= 200)
+        if (score >= 100)
         {
             FindObjectOfType<Key>().YesKey();
         }

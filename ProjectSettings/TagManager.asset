@@ -9,6 +9,10 @@ TagManager:
   - Stone
   - potato
   - frog
+  - Rope
+  - MusicBox
+  - Kazoo
+  - AlarmClock
   layers:
   - Default
   - TransparentFX
