@@ -50,3 +50,10 @@ Besides, we are aware that if we stay, we’ll slowly turn into Salamanders over
 //{Icon("Monster")}
 {CharAnimation("Monster","MonsterTalking")}
 Aaaalright, let me see what you’ve got.
+* This is a choice that can be only chosen once
+You selected Choice 1
+//square brackets
+* [A choice where the content isn't printed after choosing]
+You selected Choice 2
+
+

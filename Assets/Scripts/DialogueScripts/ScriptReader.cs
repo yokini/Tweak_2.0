@@ -14,6 +14,11 @@ public class ScriptReader : MonoBehaviour
     public TMP_Text dialogueText;
     public TMP_Text nameTag;
 
+    [SerializeField]
+    private GridLayoutGroup choiceHolder;
+    [SerializeField]
+    private Button choiceBasePrefab;
+
     //public Image characterIcon;
     void Start()
     {
@@ -52,9 +57,60 @@ public class ScriptReader : MonoBehaviour
             dialogueText.text = text;
         }
 
+        else if (storyScript.currentChoices.Count>0)
+        {
+            DisplayChoices();
+        }
         else
         {
-            dialogueText.text = "end convo";
+            dialogueText.text = "End of convo";
+        }
+    }
+
+    private void DisplayChoices()
+    {
+        if (choiceHolder.GetComponentsInChildren<Button>().Length > 0) return;
+
+        for (int i = 0; i < storyScript.currentChoices.Count; i++)
+        {
+            var choice = storyScript.currentChoices[i];
+            var button = CreateChoiceButton(choice.text);
+
+            button.onClick.AddListener(() => OnClickChoiceButton(choice));
+        }
+    }
+
+    Button CreateChoiceButton(string text)
+    {
+
+        // Instantiate the Button Prefab
+        var choiceButton = Instantiate(choiceBasePrefab);
+        choiceButton.transform.SetParent(choiceHolder.transform, false);
+
+        // Change its text
+        var buttonText = choiceButton.GetComponentInChildren<TMP_Text>();
+        buttonText.text = text;
+
+        return choiceButton;
+
+    }
+
+    void OnClickChoiceButton(Choice choice)
+    {
+        storyScript.ChooseChoiceIndex(choice.index);
+        RefreshChoiceView();
+
+        DisplayNextLine();
+    }
+
+    void RefreshChoiceView()
+    {
+        if (choiceHolder != null)
+        {
+            foreach(var button in choiceHolder.GetComponentsInChildren<Button>())
+            {
+                Destroy(button.gameObject);
+            }
         }
     }
 
