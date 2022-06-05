@@ -7,19 +7,8 @@ public class GameManagerScript : MonoBehaviour
     public GameObject restartPanel;
     public GameObject WinPanel;
     public Text scoreText;
-    public GameManagerScript instance;
     public bool TimerOngoing;
     public bool hasWon;
-   
-    public void Awake()
-    {
-        if (instance != null)
-        {
-            Destroy(instance); 
-        }
-        
-        instance = this;
-    }
 
     void Start()
     {
@@ -32,7 +21,9 @@ public class GameManagerScript : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void OnPlayerDestroyed()
+    // Create Function to Load Next Scene and assign to Wake Up button
+
+    public void OnPlayerkilled()
     {
         restartPanel.SetActive(true);
         TimerOngoing = false;
@@ -40,8 +31,11 @@ public class GameManagerScript : MonoBehaviour
 
     public void OnTimerEnd()
     {
-        WinPanel.SetActive(true);
-        TimerOngoing = false;
-        hasWon = true;
+        if (!restartPanel.activeInHierarchy)
+        {
+            WinPanel.SetActive(true);
+            TimerOngoing = false;
+            hasWon = true;
+        }
     }
 }

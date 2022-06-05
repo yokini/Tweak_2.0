@@ -8,11 +8,10 @@ public class ScoreManager : MonoBehaviour
     private float score;
     public GameManagerScript gm;
 
-    // Start is called before the first frame update
     void Start()
     {
         gm = FindObjectOfType<GameManagerScript>();
-        score = 31;
+        score = 11;
     }
     // Update is called once per frame
     void Update()
@@ -38,6 +37,5 @@ public class ScoreManager : MonoBehaviour
             scoreText.text = ((int)score).ToString();
         }
 
-        
     }
 }

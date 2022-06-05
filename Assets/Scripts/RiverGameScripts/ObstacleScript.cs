@@ -22,8 +22,6 @@ public class ObstacleScript : MonoBehaviour
         {
             speed = 0;
         }
-
-        Debug.Log(speed);
        
     }
 
@@ -36,7 +34,8 @@ public class ObstacleScript : MonoBehaviour
 
         else if (collision.tag == "Player")
         {
-            Destroy(collision.gameObject);
+            speed = 0;
+            gm.OnPlayerkilled();
         }
     }
 }

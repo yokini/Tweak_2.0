@@ -14,7 +14,7 @@ public class PlayerScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         gm = FindObjectOfType<GameManagerScript>();
-        playerSpeed = 10;
+        playerSpeed = 12;
     }
 
     // Update is called once per frame
@@ -27,6 +27,12 @@ public class PlayerScript : MonoBehaviour
         {
             playerSpeed = 0;
         }
+
+        if (gm.TimerOngoing == false)
+        {
+            playerSpeed = 0;
+
+        }
     }
 
     private void FixedUpdate()
@@ -34,8 +40,4 @@ public class PlayerScript : MonoBehaviour
         rb.velocity = playerDirection * playerSpeed;
     }
 
-    void OnDestroy()
-    {
-        gm.OnPlayerDestroyed();
-    }
 }

@@ -7,11 +7,14 @@ public class LoopingBackground : MonoBehaviour
     private float backgroundSpeed;
     public Renderer backgroundRenderer;
     public GameManagerScript gm;
+    public RiverTimer rt;
 
     void Start()
     {
         gm = FindObjectOfType<GameManagerScript>();
+        rt = FindObjectOfType<RiverTimer>();
         backgroundSpeed = 0.5f;
+        
     }
 
     void Update()
@@ -21,5 +24,7 @@ public class LoopingBackground : MonoBehaviour
         {
             backgroundSpeed = 0;  
         }
+
+        backgroundSpeed = backgroundSpeed + 0.0001f;
     }
 }

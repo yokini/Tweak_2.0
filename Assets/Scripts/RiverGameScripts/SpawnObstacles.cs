@@ -12,11 +12,6 @@ public class SpawnObstacles : MonoBehaviour
     public float timeBetweenSpawn;
     private float spawnTime;
 
-    void Start()
-    {
-        
-     
-    }
     void Update()
     {
         if (Time.time > spawnTime)
@@ -24,6 +19,8 @@ public class SpawnObstacles : MonoBehaviour
             Spawn();
             spawnTime = Time.time + timeBetweenSpawn;
         }
+
+        timeBetweenSpawn = timeBetweenSpawn + 0.0001f;
     }
 
     void Spawn()
