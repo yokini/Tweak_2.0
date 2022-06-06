@@ -2,14 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class End : MonoBehaviour
+public class EndTimeRobin : MonoBehaviour
 {  
     public float setTime = 12.0f;
- 
-    void timerEnded()
-    {
-        //I have to figure this one out!
-    }
 
     void Update()
     {
@@ -17,7 +12,7 @@ public class End : MonoBehaviour
  
         if (setTime <= 0.0f)
         {
-            FindObjectOfType<Score>().WinScore();
+            FindObjectOfType<ScoreRobin>().WinScore();
         }
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
-    public Text scoreText;
+   /* public Text scoreText;
     private float score;
     private GameObject player;
 
@@ -27,5 +27,5 @@ public class ScoreManager : MonoBehaviour
         {
             Destroy(player.gameObject);
         }
-    }
+    }*/
 }

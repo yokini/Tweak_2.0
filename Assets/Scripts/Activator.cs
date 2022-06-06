@@ -26,13 +26,13 @@ public class Activator : MonoBehaviour
         if(Input.GetKeyDown(key)&&active)
         {
             Destroy(note);
-            FindObjectOfType<Score>().AddScore();
+            FindObjectOfType<ScoreRobin>().AddScore();
             active = false;
         }
 
         if(Input.GetKeyDown(key)&&!active)
         {
-            FindObjectOfType<Score>().SubtractScore();
+            FindObjectOfType<ScoreRobin>().SubtractScore();
         }
     }
 
@@ -49,7 +49,7 @@ public class Activator : MonoBehaviour
 
         if(col.gameObject.tag=="Note")
             {
-                FindObjectOfType<Score>().SubtractScore();
+                FindObjectOfType<ScoreRobin>().SubtractScore();
             }
     }
 }

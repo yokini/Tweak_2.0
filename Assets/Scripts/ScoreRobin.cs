@@ -4,7 +4,7 @@
  using UnityEngine.UI;
 
  
- public class Score : MonoBehaviour
+ public class ScoreRobin : MonoBehaviour
  {
     public Text scoreText;
     public int score;
@@ -28,7 +28,7 @@
 
     public void WinScore()
     {
-        if (score >= 100)
+        if (score >= 1400)
         {
             FindObjectOfType<GameStatus>().YesKey();
         }
@@ -37,8 +37,4 @@
             FindObjectOfType<GameStatus>().Nokey();
         }
     }
-
-    void Update()
-     {     
-     }
 }

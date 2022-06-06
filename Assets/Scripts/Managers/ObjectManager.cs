@@ -22,9 +22,10 @@ public class ObjectManager : MonoBehaviour
     public bool croissants = false;
      
 
-    public GameObject musicBoxSprite;
-    public GameObject kazooSprite;
-    public GameObject alarmClockSprite;
+    public GameObject musicBoxObject;
+    public Vector2 MusicBoxPos;
+    //public GameObject kazooSprite;
+    //public GameObject alarmClockSprite;
 
      /*public GameObject rubikCubeSprite;
      public GameObject butterflyBookSprite;
@@ -64,9 +65,11 @@ public class ObjectManager : MonoBehaviour
 
     void Start()
     {
-        musicBoxSprite.SetActive(false);
-        kazooSprite.SetActive(false);
-        alarmClockSprite.SetActive(false);
+        
+
+        //musicBoxObject.SetActive(false);
+        //kazooSprite.SetActive(false);
+        //alarmClockSprite.SetActive(false);
 
         /*rubikCubeSprite.SetActive(false);
         butterflyBookSprite.SetActive(false);
@@ -75,15 +78,14 @@ public class ObjectManager : MonoBehaviour
         EndIsNearButton.SetActive(false);
 
         isEndNearDone = false;
+
     }
 
     void Update()
     {
-        ActiveObjects();
         CheckObjects();
         CheckEnd();
     }
-
 
 
     public void CheckObjects() 
@@ -105,23 +107,6 @@ public class ObjectManager : MonoBehaviour
         }
     }
 
-    public void ActiveObjects()
-    {
-        if(musicBox == true) 
-        {
-            musicBoxSprite.SetActive(true);
-        }
-
-        if(kazoo == true) 
-        {
-            kazooSprite.SetActive(true);
-        }
-
-        if(alarmClock == true) 
-        {
-            alarmClockSprite.SetActive(true);
-        }
-    }
 
     public void EndScenes() 
     {
