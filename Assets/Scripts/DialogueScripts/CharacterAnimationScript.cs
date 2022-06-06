@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterAnimation : MonoBehaviour
+public class CharacterAnimationScript : MonoBehaviour
 {
     public Animator charAnimController;
 

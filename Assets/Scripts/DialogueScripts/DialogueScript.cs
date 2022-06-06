@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using Ink.Runtime;
 using TMPro;
 
-public class ScriptReader : MonoBehaviour
+public class DialogueScript : MonoBehaviour
 {
     [SerializeField]
     private TextAsset inkJsonFile;
@@ -19,18 +19,15 @@ public class ScriptReader : MonoBehaviour
     [SerializeField]
     private Button choiceBasePrefab;
 
+    public UIManagerScript UIScript;
+    public GameObject DialogueBox;
+
     //public Image characterIcon;
     void Start()
     {
+        UIScript = FindObjectOfType<UIManagerScript>();
+        DialogueBox.SetActive(true);
         LoadStory();
-    }
-
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            DisplayNextLine();
-        }
     }
 
     void LoadStory()
@@ -40,9 +37,6 @@ public class ScriptReader : MonoBehaviour
         //storyScript.BindExternalFunction("Icon", (string charName) => ChangeCharacterIcon(charName));
         storyScript.BindExternalFunction("CharAnimation", (string charName, string animName) => playCharacterAnim(charName, animName));
         DisplayNextLine();
-
-     
-
     }
 
     public void DisplayNextLine()
@@ -63,7 +57,10 @@ public class ScriptReader : MonoBehaviour
         }
         else
         {
-            dialogueText.text = "End of convo";
+            DialogueBox.SetActive(false);
+            //nameTag.text = null;
+            //dialogueText.text = null;
+            UIScript.EndConvo();
         }
     }
 
@@ -130,7 +127,7 @@ public class ScriptReader : MonoBehaviour
     public void playCharacterAnim(string charName, string animName)
     {
         GameObject character = GameObject.Find(charName);
-        character.GetComponent<CharacterAnimation>().CharacterAnimations(animName);
+        character.GetComponent<CharacterAnimationScript>().CharacterAnimations(animName);
     }
 
 }
