@@ -10,11 +10,15 @@ public class WeaponMovement : MonoBehaviour
     Transform itemRotate;
     public float rotationSpeed;
 
+    Skyler_Timer timer;
+
     void Start()
     {
         rb.velocity = transform.up * speed;   
 
         itemRotate = gameObject.transform;
+
+        timer = FindObjectOfType<Skyler_Timer>();
     }
 
     void Update() 
@@ -26,11 +30,18 @@ public class WeaponMovement : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collider) 
     {
         Debug.Log(collider.name);
-        Destroy(gameObject);
+        
 
         if (collider.tag == "Enemy") 
         {
             Destroy(collider.gameObject);
+
+            if (timer.currentTime > 0) 
+            {
+                Skyler_MinigameManager.Instance.score += 1;
+            }
+
+            
         }
     }
 

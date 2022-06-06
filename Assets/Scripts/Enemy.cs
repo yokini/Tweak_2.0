@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,10 +11,15 @@ public class Enemy : MonoBehaviour
     Vector3 direction;
 
     public float moveSpeed;
+    public float boostSpeedDelay = 2f;
+    private float boostSpeed;
+    
     
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+
+        playerPos = Skyler_MinigameManager.Instance.player;
     }
 
     
@@ -25,13 +30,17 @@ public class Enemy : MonoBehaviour
 
         movement = direction;
 
-        void OnTriggerEnter2D(Collider2D collider) {
-            if (collider.tag == "Player") 
-            {
-                Destroy(collider.gameObject);
-                Debug.Log("Enemy hit");
-            }
+        
+
+        if (ShouldChangeSpeed()) 
+        {
+            ChangeSpeed();
+            //Debug.Log(moveSpeed);
+
         }
+
+        
+         
         
     }
 
@@ -43,5 +52,35 @@ public class Enemy : MonoBehaviour
     void MoveCharacter(Vector3 direction) 
     {
         rb.MovePosition(transform.position + (direction * moveSpeed * Time.deltaTime));
+    }
+
+    void ChangeSpeed() 
+    {
+        boostSpeed = Time.time + boostSpeedDelay;
+        moveSpeed += 1;
+
+    }
+
+    private bool ShouldChangeSpeed() 
+    {
+        return Time.time >= boostSpeed;
+    }
+
+    void OnTriggerEnter2D(Collider2D collider) 
+    {
+        Debug.Log(collider.name);
+
+        /*if (collider.tag == "Player") 
+        {
+            if (Skyler_MinigameManager.Instance.timer.currentTime > 0) 
+            {
+                Debug.Log(collider.name);
+                Destroy(gameObject);
+                Skyler_MinigameManager.Instance.playerHealth -= 10;
+                Debug.Log(Skyler_MinigameManager.Instance.playerHealth);
+            }
+
+            
+        }*/
     }
 }

@@ -6,10 +6,6 @@ public class PlayerMovement : MonoBehaviour
 {
     public float rotationSpeed;
 
-    
-
-    
-
     public Transform playerTip;
 
     private Vector2 lookDirection;
@@ -19,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private float horizontalValue;
     private float verticalValue;
 
-    public Rigidbody rb;
+    public Rigidbody2D rb;
 
     
 
@@ -32,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     {
         
 
-        rb = GetComponent<Rigidbody>(); 
+        rb = GetComponent<Rigidbody2D>(); 
       
     }
 
@@ -48,6 +44,14 @@ public class PlayerMovement : MonoBehaviour
         horizontalValue = Input.GetAxis("Horizontal")*moveSpeed;
         verticalValue = Input.GetAxis("Vertical")*moveSpeed;
 
+        void OnTriggerEnter2D(Collider2D collider) 
+        {
+            if (collider.tag == "Enemy") 
+            {
+                Destroy(gameObject);
+                Debug.Log("Enemy hit");
+            }
+        }
         
 
     }
