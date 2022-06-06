@@ -1,15 +1,12 @@
 EXTERNAL Name(charName)
-EXTERNAL Icon(charName)
+//EXTERNAL Icon(charName)
 
 {Name("River")}
-{Icon("River")}
-Let’s see what we’ve got here! Splitting up would make things faster. Robin, you can climb right? You take the tree, Skyler the *narrow place*. Being the smallest, I can access this *small place*
+//{Icon("River")}
+Let’s see what we’ve got here!
 {Name("Robin")}
-{Icon("Robin")}
-Alright. Let’s meet up here when we are done.
-{Name("River")}
-{Icon("River")}
-Noted! 
+//{Icon("Robin")}
+Splitting up would make things fas- wait why do I feel so tired all of a s-
 {Name("Skyler")}
-{Icon("Skyler")}
-... Guys please don’t get lost.
+//{Icon("Skyler")}
+I don’t feel so good either. What’s goin-

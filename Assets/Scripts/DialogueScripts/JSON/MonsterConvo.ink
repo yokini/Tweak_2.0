@@ -25,11 +25,11 @@ Watch your tongue kid or I’ll teach you a lesson.
 {Name("Skyler")}
 //{Icon("Skyler")}
 {CharAnimation("Monster","MonsterIdle")}
-S-say we have things that you want…
+S-say we have things that you want...
 {Name("Monster")}
 //{Icon("Monster")}
 {CharAnimation("Monster","MonsterTalking")}
-I’m listening…
+I’m listening...
 {Name("Robin")}
 //{Icon("Robin")}
 {CharAnimation("Monster","MonsterIdle")}
