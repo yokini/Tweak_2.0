@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/RobinMiniGame.unity
     guid: a71a0e096d5b23f4c8f0098b447e2a4a
   - enabled: 1
+    path: Assets/Scenes/RiverMiniGame 1.unity
+    guid: 91211e4f1f951eb4e97fabd20aa2e266
+  - enabled: 1
+    path: Assets/Scenes/SkylerMiniGame.unity
+    guid: eaaf664fc3c93c2458965ac390b38f11
+  - enabled: 1
     path: Assets/Scenes/Ending 1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
@@ -23,4 +29,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ending 4.unity
     guid: 394a08d1ca2e3734f86c52c7f20f2514
+  - enabled: 1
+    path: Assets/Scenes/RobinObject.unity
+    guid: 5249031630e92eb4b834043b92a3b9f6
+  - enabled: 1
+    path: Assets/Scenes/RiverObject.unity
+    guid: 97b7d365276946e48a11642849113ade
+  - enabled: 1
+    path: Assets/Scenes/SkylerObject.unity
+    guid: 5f7f97d38dd06b5408203f6eafb41cbe
   m_configObjects: {}

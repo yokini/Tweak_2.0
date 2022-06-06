@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
  using UnityEngine.UI;
+ using UnityEngine.SceneManagement;
 
-public class Key : MonoBehaviour
+public class GameStatus : MonoBehaviour
 {
     public Image renderWin;
     public Image renderLose;
@@ -23,7 +24,13 @@ public class Key : MonoBehaviour
         renderLose.gameObject.SetActive(true);
     }
 
-    void Update()
-    {  
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void WakeUp()
+    {
+        SceneManager.LoadScene(8);
     }
 }

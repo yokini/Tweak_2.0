@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-public class PickUpObject : MonoBehaviour
-{
-    public GameObject musicBoxButton;
-    public GameObject kazooButton;
-    public GameObject alarmClockButton;
 
-    ObjectManager ObjectManager;
+
+public class Inventory : MonoBehaviour
+{
+    public Object musicBoxObject;
+
+    public ObjectManager ObjectManager;
     
     void Start()
     {
@@ -19,7 +19,7 @@ public class PickUpObject : MonoBehaviour
     
     void Update()
     {
-        
+      
     }
 
     public void JustMoveOnMusicBox() 
@@ -53,7 +53,8 @@ public class PickUpObject : MonoBehaviour
         }
     }
 
-    
+    //public void MoveOn()
 
+   
    
 }

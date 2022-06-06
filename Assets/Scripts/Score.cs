@@ -30,11 +30,11 @@
     {
         if (score >= 100)
         {
-            FindObjectOfType<Key>().YesKey();
+            FindObjectOfType<GameStatus>().YesKey();
         }
         else
         {
-            FindObjectOfType<Key>().Nokey();
+            FindObjectOfType<GameStatus>().Nokey();
         }
     }
 
