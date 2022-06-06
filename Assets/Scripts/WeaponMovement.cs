@@ -35,6 +35,7 @@ public class WeaponMovement : MonoBehaviour
         if (collider.tag == "Enemy") 
         {
             Destroy(collider.gameObject);
+            Destroy(this.gameObject);
 
             if (timer.currentTime > 0) 
             {
