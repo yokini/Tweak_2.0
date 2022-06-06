@@ -31,6 +31,6 @@ public class GameStatus : MonoBehaviour
 
     public void WakeUp()
     {
-        SceneManager.LoadScene(8);
+        SceneManager.LoadScene(5);
     }
 }

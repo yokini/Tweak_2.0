@@ -89,7 +89,7 @@ public class Inventory : MonoBehaviour
 
     public void MoveOn( string tag, GameObject obj) 
     {
-        if (SceneManager.GetActiveScene().buildIndex == 8) 
+        if (SceneManager.GetActiveScene().buildIndex == 5) 
         {
              clickable = FindObjectOfType<Clickable>();
 
