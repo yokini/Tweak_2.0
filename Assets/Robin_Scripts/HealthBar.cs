@@ -20,7 +20,7 @@ public class HealthBar : MonoBehaviour
     void Start()
     {
         miniGameManager = FindObjectOfType<Skyler_MinigameManager>();
-        healthBar = GetComponent<Image>();
+        //healthBar = GetComponent<Image>();
        
         
 
@@ -32,5 +32,6 @@ public class HealthBar : MonoBehaviour
     {
         currentHealth = miniGameManager.playerHealth;
         healthBar.fillAmount = currentHealth/maxHealth;
+
     }
 }

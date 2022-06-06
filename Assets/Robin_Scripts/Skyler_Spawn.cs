@@ -40,7 +40,7 @@ public class Skyler_Spawn : MonoBehaviour
 
     private bool ShouldSpawn()
     {
-        return Time.time >= nextSpawnTime && Skyler_MinigameManager.Instance.timer.currentTime != 0;
+        return Time.time >= nextSpawnTime && Skyler_MinigameManager.Instance.timer.currentTime != 0 && Skyler_MinigameManager.Instance.playerHealth != 0;
         
     }
 }

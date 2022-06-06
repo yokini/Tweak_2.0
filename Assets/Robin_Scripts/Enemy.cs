@@ -70,17 +70,28 @@ public class Enemy : MonoBehaviour
     {
         Debug.Log(collider.name);
 
-        /*if (collider.tag == "Player") 
+        if (collider.tag == "Player") 
         {
             if (Skyler_MinigameManager.Instance.timer.currentTime > 0) 
             {
                 Debug.Log(collider.name);
-                Destroy(gameObject);
-                Skyler_MinigameManager.Instance.playerHealth -= 10;
-                Debug.Log(Skyler_MinigameManager.Instance.playerHealth);
+               
+                //Debug.Log(Skyler_MinigameManager.Instance.playerHealth);
+
+                if (Skyler_MinigameManager.Instance.playerHealth > 0 ) 
+                {
+                     Skyler_MinigameManager.Instance.playerHealth -= 10;
+                }
+
+                else 
+                {
+                    Skyler_MinigameManager.Instance.playerHealth = 0;
+                }
+                Destroy(this.gameObject);
+                
             }
 
             
-        }*/
+        }
     }
 }

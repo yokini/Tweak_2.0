@@ -21,9 +21,10 @@ public class PointandShoot : MonoBehaviour
        target = transform.GetComponent<Camera>().ScreenToWorldPoint(new Vector2(Input.mousePosition.x, Input.mousePosition.y));
        crossHair.transform.position = new Vector2(target.x, target.y);
 
-       if (timer.currentTime <= 0 ) 
+       if (timer.currentTime <= 0 || Skyler_MinigameManager.Instance.playerHealth <= 0) 
        {
            Cursor.visible = true;
+           crossHair.SetActive(false);
        }
 
 

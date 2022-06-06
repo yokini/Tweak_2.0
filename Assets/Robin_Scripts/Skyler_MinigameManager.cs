@@ -54,7 +54,13 @@ public class Skyler_MinigameManager : MonoBehaviour
 
     void Update() 
     {
-        if ( timer.currentTime == 0 ) 
+        
+        if (playerHealth <= 0) 
+        {
+            losePanel.SetActive(true);
+        }
+        
+        if ( timer.currentTime == 0 && playerHealth != 0 ) 
         {
             winPanel.SetActive(true);
         }

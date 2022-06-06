@@ -37,7 +37,7 @@ public class WeaponMovement : MonoBehaviour
             Destroy(collider.gameObject);
             Destroy(this.gameObject);
 
-            if (timer.currentTime > 0) 
+            if (timer.currentTime > 0 && Skyler_MinigameManager.Instance.playerHealth > 0) 
             {
                 Skyler_MinigameManager.Instance.score += 1;
             }
