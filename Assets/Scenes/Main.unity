@@ -2043,8 +2043,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 960.0001, y: 540}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_AnchoredPosition: {x: 960, y: 640}
+  m_SizeDelta: {x: 1920.0002, y: 1280}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &903487534
 MonoBehaviour:
@@ -3238,7 +3238,7 @@ PrefabInstance:
     - target: {fileID: 8783107491445274654, guid: 979166c74c71d604e8bdf4681ba592bd,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8783107491445274655, guid: 979166c74c71d604e8bdf4681ba592bd,
         type: 3}
@@ -3362,6 +3362,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 979166c74c71d604e8bdf4681ba592bd, type: 3}
+--- !u!1 &1146990711 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8783107491445274654, guid: 979166c74c71d604e8bdf4681ba592bd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1146990710}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1155701462
 GameObject:
   m_ObjectHideFlags: 0
@@ -3555,9 +3561,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1174305493}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d91694840cc604840bd9568708f8421d, type: 3}
+  m_Script: {fileID: 11500000, guid: c7d4324fa31b79e49a05b68e1bdd29c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicBoxObject: {fileID: 1146990711}
 --- !u!1 &1225232790
 GameObject:
   m_ObjectHideFlags: 0
