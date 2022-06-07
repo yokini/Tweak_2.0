@@ -30,7 +30,7 @@ Okay so first off, you absolutely hate water. Secondly, your number of “near�
 Oh no...
 {Name("River")}
 //{Icon("River")}
-Listen. Yes, alright. I’ve heard my brother’s friend bragging about finding a so-called monster there... And I...really wanna see it. To be fair, he came back alive right?? Trust me, I w-wouldn’t have asked you to join me if it was dangerous.
+Listen. Yes, alright. I’ve heard my brother’s friend Oly bragging about finding a so-called monster there... And I...really wanna see it. To be fair, he came back alive right?? Trust me, I w-wouldn’t have asked you to join me if it was dangerous.
 {Name("Robin")}
 //{Icon("Robin")}
 ... your brother refused to go with you, didn’t he?...
