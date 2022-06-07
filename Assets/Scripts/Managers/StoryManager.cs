@@ -6,8 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class StoryManager : MonoBehaviour
 {   
+    //This script manages which minigame to load
+
+    //Singleton reference
     public static StoryManager instance;
     
+    //Singleton
     void Awake()
     {
         if(instance != null)
@@ -21,12 +25,14 @@ public class StoryManager : MonoBehaviour
         
     }
 
+    // Loads Robin mingame
     public void LoadRobinMiniGame() 
     {
         SceneManager.LoadScene(1);
         Debug.Log("You are in Robin's minigame");
     }
 
+    //Loads River minigame
     public void LoadRiverMiniGame() 
     {
         SceneManager.LoadScene(2);
@@ -34,6 +40,7 @@ public class StoryManager : MonoBehaviour
         
     }
 
+    //Loads skyler minigame
     public void LoadSkylerMiniGame() 
     {
         SceneManager.LoadScene(3);

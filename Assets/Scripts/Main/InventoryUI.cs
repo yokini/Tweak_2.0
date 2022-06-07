@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class InventoryUI : MonoBehaviour
 {
+    //This script is used to update the Inventory UI if inventory gets updated
+
+    //Reference to the all collectable objects in minigames
     public GameObject musicBoxObject;
 
 
@@ -13,7 +16,9 @@ public class InventoryUI : MonoBehaviour
 
 
     void Start()
-    {
+    {   
+        //Disabling all Gameobjects in the slot when the main scene loads. 
+        //These objects will be activated according to what player chooses in a minigame
         musicBoxObject.SetActive(false);
 
         rubikCubeObject.SetActive(false);
@@ -24,6 +29,8 @@ public class InventoryUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Objects in the Inventory slots get activated according to what objects player chooses
+        
         if (ObjectManager.instance.musicBox) 
         {
             musicBoxObject.SetActive(true);

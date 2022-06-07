@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Boomerang : MonoBehaviour
 {
+    //This script is not used anymore in the game
     bool go;
 
     public GameObject player;
