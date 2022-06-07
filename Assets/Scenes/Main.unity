@@ -4535,13 +4535,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicBox: 0
-  kazoo: 0
+  kazoo: 1
   alarmClock: 0
   rubikCube: 0
-  butterflyBook: 0
+  butterflyBook: 1
   stonehengePhoto: 0
   cookies: 0
-  wine: 0
+  wine: 1
   croissants: 0
   musicBoxObject: {fileID: 8783107491445274654, guid: 979166c74c71d604e8bdf4681ba592bd,
     type: 3}
@@ -4549,11 +4549,11 @@ MonoBehaviour:
   riverObject: 0
   skylerObject: 0
   robinObject: 0
-  riverGameOver: 0
-  skyleGameOver: 0
-  robinGameOver: 0
+  riverGameOver: 1
+  skyleGameOver: 1
+  robinGameOver: 1
   EndIsNearButton: {fileID: 1308829715}
-  isEndNearDone: 0
+  isEndNearDone: 1
 --- !u!4 &1404470706
 Transform:
   m_ObjectHideFlags: 0

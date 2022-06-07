@@ -112,28 +112,28 @@ public class ObjectManager : MonoBehaviour
     {
         if (robinObject && riverObject && skylerObject) 
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(7);
         }
 
         else if ((robinObject && riverObject) || (robinObject && skylerObject) || (riverObject && skylerObject) ) 
         {
-            SceneManager.LoadScene(3);
+            SceneManager.LoadScene(8);
         }
 
         else if (robinObject || riverObject || skylerObject) 
         {
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(9);
         }
 
         else if (!robinObject || !riverObject || !skylerObject) 
         {
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene(10);
         }
     }
 
     public void EndIsNear() 
     {
-        if (riverGameOver && skyleGameOver && robinGameOver) 
+        if (riverGameOver || skyleGameOver || robinGameOver) 
         {
             EndIsNearButton.SetActive(true);
         }
