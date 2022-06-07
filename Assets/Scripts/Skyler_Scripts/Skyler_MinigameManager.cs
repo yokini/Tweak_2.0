@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Skyler_MinigameManager : MonoBehaviour
 {
@@ -66,6 +67,11 @@ public class Skyler_MinigameManager : MonoBehaviour
         }
 
         Debug.Log(playerHealth);
+    }
+
+    public void LoadSkylerObject() 
+    {
+        SceneManager.LoadScene(7);
     }
 
     

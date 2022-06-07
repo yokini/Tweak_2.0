@@ -40,6 +40,8 @@ public class StoryManager : MonoBehaviour
         Debug.Log("You are in Skyler's minigame");
     }
 
+    
+
 
 
 

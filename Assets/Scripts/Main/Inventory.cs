@@ -121,6 +121,52 @@ public class Inventory : MonoBehaviour
                 ObjectManager.instance.robinGameOver = true;
             }
 
+             if (tag == "RubikCube") 
+            {
+                ObjectManager.instance.rubikCube = true;
+            }
+
+            if (tag == "ButterflyBook") 
+            {
+                ObjectManager.instance.butterflyBook = true;
+            }
+
+            if (tag == "StonehengePhoto") 
+            {
+                ObjectManager.instance.stonehengePhoto = true;
+            }
+
+            if (tag == "RubikCube" || tag == "ButterflyBook" || tag == "StonehengePhoto" ) 
+            {
+                ObjectManager.instance.riverGameOver = true;
+            }
+
+            if (tag == "Cookies") 
+            {
+                ObjectManager.instance.cookies = true;
+            }
+
+            if (tag == "Wine") 
+            {
+                ObjectManager.instance.wine = true;
+            }
+
+            if (tag == "Croissants") 
+            {
+                ObjectManager.instance.croissants = true;
+            }
+
+            if (tag == "Cookies" || tag == "Wine" || tag == "Croissants" ) 
+            {
+                ObjectManager.instance.robinGameOver = true;
+            }
+
+
+
+        
+
+            
+
         }
     }
 
