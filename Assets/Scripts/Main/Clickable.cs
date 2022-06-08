@@ -3,10 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Clickable : MonoBehaviour
-{
+{   
+    //This script is used to select an item after minigame is finished
+
+    // Instance of an inventory to reference the function to update the inventory in the main scene
     Inventory inventory;
+
+    //variable to hold the value of a tag of the selected item to make changes in object manager
     public string target;
 
+    //Reference to the offered object
     public GameObject objectHolder;
 
     void Start() 
@@ -19,6 +25,7 @@ public class Clickable : MonoBehaviour
         ClickableMusicBox();
     }
 
+    //To register a hit on the offered object and call a funtion to update the inventory
     public void ClickableMusicBox()
     {
         if(Input.GetMouseButtonDown(0))

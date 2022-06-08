@@ -20,7 +20,7 @@ public class Inventory : MonoBehaviour
     public static Inventory instance;
 
     
-
+    // Singleton
     void Awake()
     {
         if(instance != null)
@@ -86,7 +86,9 @@ public class Inventory : MonoBehaviour
             ObjectManager.robinGameOver = true;
         }
     }*/
-
+    
+    //Funtion to update the inventory in the main scene. It updates the inventory on the basis of what object was selected
+    //It also checks whether the minigame is finished by the player or not. 
     public void MoveOn( string tag, GameObject obj) 
     {
         if (SceneManager.GetActiveScene().buildIndex == 5) 

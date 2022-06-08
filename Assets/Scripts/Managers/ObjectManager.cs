@@ -7,8 +7,11 @@ using UnityEngine.SceneManagement;
 
 public class ObjectManager : MonoBehaviour
 {
+    //Singleton reference
     public static ObjectManager instance;
 
+
+    // Variables to check what objects were collected from minigames
     public bool musicBox = false;
     public bool kazoo = false;
     public bool alarmClock = false;
@@ -22,8 +25,8 @@ public class ObjectManager : MonoBehaviour
     public bool croissants = false;
      
 
-    public GameObject musicBoxObject;
-    public Vector2 MusicBoxPos;
+    //public GameObject musicBoxObject;
+    //public Vector2 MusicBoxPos;
     //public GameObject kazooSprite;
     //public GameObject alarmClockSprite;
 
@@ -35,21 +38,24 @@ public class ObjectManager : MonoBehaviour
      public GameObject wineSprite;
      public GameObject croissantsSprite;*/
 
-
+    //Variables to check if the player has selected a correct object
     public bool riverObject;
     public bool skylerObject;
     public bool robinObject;
 
+    //Variables to check if the minigame is finished
     public bool riverGameOver;
     public bool skyleGameOver;
     public bool robinGameOver;
 
+    //Reference to the button which will pop up when all minigames are finished
     public GameObject EndIsNearButton;
 
+    //Variable to run the function only once in update
     public bool isEndNearDone;
 
 
-
+    //Singleton
     void Awake()
     {
         if(instance != null)
@@ -75,6 +81,7 @@ public class ObjectManager : MonoBehaviour
         butterflyBookSprite.SetActive(false);
         musicBoxSprite.SetActive(false);*/
 
+        //To disable the end button in the beginning of the game
         EndIsNearButton.SetActive(false);
 
         isEndNearDone = false;
@@ -87,7 +94,7 @@ public class ObjectManager : MonoBehaviour
         CheckEnd();
     }
 
-
+    //This function checks if the selected object is the correct one or not
     public void CheckObjects() 
     {
         if(musicBox == true) 
@@ -107,7 +114,7 @@ public class ObjectManager : MonoBehaviour
         }
     }
 
-
+    //This functions manages different endings according to what objects player select in minigames
     public void EndScenes() 
     {
         if (robinObject && riverObject && skylerObject) 
@@ -131,14 +138,16 @@ public class ObjectManager : MonoBehaviour
         }
     }
 
+    // Enables the end button if all minigames are over
     public void EndIsNear() 
     {
-        if (riverGameOver || skyleGameOver || robinGameOver) 
+        if (riverGameOver && skyleGameOver && robinGameOver) 
         {
             EndIsNearButton.SetActive(true);
         }
     }
 
+    //Makes sure to check if all minigames are over only once in update
     public void CheckEnd()
     {
         if (isEndNearDone == false) 

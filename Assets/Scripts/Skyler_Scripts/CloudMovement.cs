@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class CloudMovement : MonoBehaviour
 {
+    //This script is not used anymore 
+    
     public Transform target;
 
     public Rigidbody rb;
