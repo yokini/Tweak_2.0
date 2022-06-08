@@ -66,8 +66,12 @@ public class ObjectManager : MonoBehaviour
         instance = this;
 
         DontDestroyOnLoad(this.gameObject);
+
+        
         
     }
+
+    
 
     void Start()
     {
@@ -82,7 +86,14 @@ public class ObjectManager : MonoBehaviour
         musicBoxSprite.SetActive(false);*/
 
         //To disable the end button in the beginning of the game
-        EndIsNearButton.SetActive(false);
+
+        //EndIsNearButton.SetActive(false);
+
+       
+
+        
+
+
 
         isEndNearDone = false;
 
@@ -91,7 +102,20 @@ public class ObjectManager : MonoBehaviour
     void Update()
     {
         CheckObjects();
-        CheckEnd();
+        //CheckEnd();
+        EndIsNear();
+
+        /*EndIsNearButton = GameObject.Find("EndButton");
+
+        if (riverGameOver && skyleGameOver && robinGameOver) 
+        {
+            EndIsNearButton.SetActive(true);
+        }
+
+        else 
+        {
+            EndIsNearButton.SetActive(false);
+        }*/
     }
 
     //This function checks if the selected object is the correct one or not

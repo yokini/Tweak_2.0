@@ -120,7 +120,8 @@ public class Inventory : MonoBehaviour
 
             if (tag == "Cookies" || tag == "Wine" || tag == "Croissants" ) 
             {
-                ObjectManager.instance.robinGameOver = true;
+                ObjectManager.instance.skyleGameOver = true;
+                Debug.Log("RobinGameOver");
             } 
 
         }
