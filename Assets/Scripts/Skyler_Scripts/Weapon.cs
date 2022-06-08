@@ -8,7 +8,12 @@ public class Weapon : MonoBehaviour
    public Transform playerTip;
    public GameObject boomerang;
 
-    
+   public AudioSource audioSource;
+
+    void Start() 
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     void Update()
     {  if (Input.GetButtonDown("Fire1"))
     {
@@ -20,5 +25,6 @@ public class Weapon : MonoBehaviour
     private void Shoot()
     {
         Instantiate(boomerang, playerTip.position, playerTip.rotation);
+        audioSource.Play();
     }
 }

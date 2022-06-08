@@ -7,7 +7,7 @@ public class TimeManagerScript: MonoBehaviour
     // Time Management Scripy
     // Declaring Variabloes
     public Text timeText;
-    private float time;
+    public float time;
     public GameManagerScript gm;
 
     void Start()
@@ -15,7 +15,7 @@ public class TimeManagerScript: MonoBehaviour
         // Assigning Variables
         gm = FindObjectOfType<GameManagerScript>();
         // Assigning Game time length
-        time = 31;
+        time = 15;
     }
 
     void Update()

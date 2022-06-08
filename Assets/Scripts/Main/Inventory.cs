@@ -101,7 +101,7 @@ public class Inventory : MonoBehaviour
        
         if (obj.CompareTag(tag)) 
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadScene(3);
 
             if (tag == "MusicBox") 
             {

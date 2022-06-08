@@ -25,17 +25,32 @@ public class StoryManager : MonoBehaviour
         
     }
 
+    public void LoadRobinSalamander() 
+    {
+        SceneManager.LoadScene(4);
+    }
+
+    public void LoadRiverSalamander() 
+    {
+        SceneManager.LoadScene(5);
+    }
+
+    public void LoadSkylerSalamander() 
+    {
+        SceneManager.LoadScene(6);
+    }
+
     // Loads Robin mingame
     public void LoadRobinMiniGame() 
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(7);
         Debug.Log("You are in Robin's minigame");
     }
 
     //Loads River minigame
     public void LoadRiverMiniGame() 
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(8);
         Debug.Log("You are in River's minigame");
         
     }
@@ -43,7 +58,7 @@ public class StoryManager : MonoBehaviour
     //Loads skyler minigame
     public void LoadSkylerMiniGame() 
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(9);
         Debug.Log("You are in Skyler's minigame");
     }
 

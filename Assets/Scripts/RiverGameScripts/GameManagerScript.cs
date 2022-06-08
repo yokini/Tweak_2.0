@@ -51,4 +51,9 @@ public class GameManagerScript : MonoBehaviour
             SpawnManager.SetActive(false);
         }
     }
+
+    public void LoadRiverObject() 
+    {
+        SceneManager.LoadScene(11);
+    }
 }

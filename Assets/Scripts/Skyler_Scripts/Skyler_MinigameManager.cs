@@ -71,7 +71,7 @@ public class Skyler_MinigameManager : MonoBehaviour
 
     public void LoadSkylerObject() 
     {
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene(12);
     }
 
     

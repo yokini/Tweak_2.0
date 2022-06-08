@@ -26,11 +26,11 @@ public class GameStatus : MonoBehaviour
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(7);
     }
 
     public void WakeUp()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(10);
     }
 }
