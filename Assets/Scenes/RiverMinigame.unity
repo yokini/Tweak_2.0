@@ -1618,8 +1618,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa197b36725ace944981972fc42127c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  restartPanel: {fileID: 512925105}
-  WinPanel: {fileID: 1913875874}
+  restartPanel: {fileID: 2129538766}
+  WinPanel: {fileID: 952658011}
   scoreText: {fileID: 340467183}
   TimerOngoing: 0
   hasWon: 0
