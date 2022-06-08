@@ -1,13 +1,8 @@
 EXTERNAL Name(charName)
-//EXTERNAL Icon(charName)
-//EXTERNAL CharAnimation(charName, animationName)
 
 {Name("Robin")}
-//{Icon("Monster")}
-//{CharAnimation("Monster","MonsterIdle")}
 Uh… hi?
 {Name("Salamander")}
-//{CharAnimation("Monster","MonsterTalking")}
 Ugh greetings oh skeptical one. You may ask me some questions, so choose wisely.
 -> questions
 
