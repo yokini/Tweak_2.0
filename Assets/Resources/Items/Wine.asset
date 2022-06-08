@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0e3e529b48e82f4cba95d8ec381ad9d, type: 3}
   m_Name: Wine
   m_EditorClassIdentifier: 
-  name: New Object
-  icon: {fileID: 0}
+  name: Wine
+  icon: {fileID: 21300000, guid: 1d87a222d4a6ce54cabffcae5195fb7c, type: 3}

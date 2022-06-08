@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: RubiksCube
   m_EditorClassIdentifier: 
   name: RubiksCube
-  icon: {fileID: 21300000, guid: 5d4c2336244f3c04faeb4c0eb20c454f, type: 3}
-  isDefaultItem: 0
+  icon: {fileID: 21300000, guid: e8dc5cc3c5693414492c8ad9162b4c32, type: 3}

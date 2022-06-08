@@ -19,6 +19,9 @@ TagManager:
   - Clouds
   - RubikCube
   - Cookies
+  - ButterflyBook
+  - StonehengePhoto
+  - Wine
   layers:
   - Default
   - TransparentFX

@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: MusicBox
   m_EditorClassIdentifier: 
   name: MusicBox
-  icon: {fileID: 21300000, guid: fb8c9047a8eaf5247959b2e57cfbd3b6, type: 3}
-  isDefaultItem: 0
+  icon: {fileID: 21300000, guid: a78caf74b5a015c40b801dafc88d089a, type: 3}

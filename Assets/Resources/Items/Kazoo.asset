@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0e3e529b48e82f4cba95d8ec381ad9d, type: 3}
   m_Name: Kazoo
   m_EditorClassIdentifier: 
-  name: New Object
-  icon: {fileID: 0}
+  name: Kazoo
+  icon: {fileID: 21300000, guid: a90e69e773a2c5743a9dc0753a5cb445, type: 3}
