@@ -11,7 +11,8 @@ What would you like to know?
 * [What do you mean by “another one”?]-> C2
 * [What can you tell me about the creature who inhabits the creak?] -> C1
 * [Who are you?]-> C3
-* [No more questions] Alright. Since you're so young, I'll give you a chance to make your way out. Follow me.-> END
+* [No more questions] Alright. Since you're so young, I'll give you a chance to make your way out.
+Here''s a minigame. Use the WS keys to move and avoid the obstacles coming your way, until the time is up. Good luck!-> END
 
 === C1 ===
 So you do know about Huba Hub- I mean, the Great Huba.

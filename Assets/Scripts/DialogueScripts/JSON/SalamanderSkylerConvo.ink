@@ -12,7 +12,8 @@ What would you like to know?
 * [Does the Monster exist?]-> C1
 * [W-why Unfortunate?] -> C2
 * [Who are you?]-> C3
-* [No more questions, thank you.] Daww, I'd hate to see you end up like me. I'll give you a chance to make your way out. Follow me.
+* [No more questions, thank you.] Daww, I'd hate to see you end up like me. I'll give you a chance to make your way out.
+Here's a minigame. Use the mouse to aim at the evil clouds and click to hit them with the boomerang. Try to avoid them (WASD keys). Resist until the time is over. Good Luck!
 -> END
 
 === C1 ===

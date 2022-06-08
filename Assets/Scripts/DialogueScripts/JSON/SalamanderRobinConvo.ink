@@ -11,7 +11,8 @@ What would you like to know?
 * [Is there really a Monster inhabiting this creak?]-> C1
 * [Can you tell me more about this place?] -> C2
 * [What are you exactly?]-> C3
-* [No more questions.] Alright smartass. Since I don’t really wanna see you around, I'll give you a chance to make your way out. Follow me.-> END
+* [No more questions.] Alright smartass. Since I don’t really wanna see you around, I'll give you a chance to make your way out.
+Here's a minigame. Use the 1, 2, 3 and 4 keys to destroy the spiders on time. Aim at 1400 points. Each miss will cost you 20 points. Good Luck!-> END
 
 === C1 ===
  Who are you calling a Monster? Huba is a creature who is bound to this place, and maintains it.
