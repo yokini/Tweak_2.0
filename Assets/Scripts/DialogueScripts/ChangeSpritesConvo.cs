@@ -23,7 +23,7 @@ public class ChangeSpritesConvo : MonoBehaviour
         RiverSpeak.SetActive(false);
         RobinSpeak.SetActive(false);
         SkylerSpeak.SetActive(false);
-        Debug.Log(dS.nameTag.text);
+ 
         if(dS.nameTag.text == "Robin")
         {
             RobinSpeak.SetActive(true);

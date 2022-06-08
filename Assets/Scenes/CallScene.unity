@@ -198,7 +198,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -81
   m_TargetDisplay: 0
 --- !u!224 &301892186
 RectTransform:
@@ -219,7 +219,7 @@ RectTransform:
   - {fileID: 1157496073}
   - {fileID: 1175831486}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -315,7 +315,7 @@ PrefabInstance:
     - target: {fileID: 5935851961827213390, guid: 24d7b6ac79624a3459a8a791fc256112,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5935851961827213390, guid: 24d7b6ac79624a3459a8a791fc256112,
         type: 3}
@@ -367,6 +367,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7487588393531781015, guid: 24d7b6ac79624a3459a8a791fc256112,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7487588393531781015, guid: 24d7b6ac79624a3459a8a791fc256112,
+        type: 3}
+      propertyPath: m_Colors.m_NormalColor.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8158225570609125469, guid: 24d7b6ac79624a3459a8a791fc256112,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -376,6 +386,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 197
+      objectReference: {fileID: 0}
+    - target: {fileID: 8738006474824292796, guid: 24d7b6ac79624a3459a8a791fc256112,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9221683533259170420, guid: 24d7b6ac79624a3459a8a791fc256112,
         type: 3}
@@ -548,7 +563,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &740587770
 MonoBehaviour:
   m_ObjectHideFlags: 0

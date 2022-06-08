@@ -57,6 +57,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Ending 4.unity
     guid: 394a08d1ca2e3734f86c52c7f20f2514
   - enabled: 1
-    path: Assets/Scenes/done/CallScene.unity
+    path: Assets/Scenes/CallScene.unity
     guid: af4f1bfb8178adb4a9f04b8de5f3369b
   m_configObjects: {}
