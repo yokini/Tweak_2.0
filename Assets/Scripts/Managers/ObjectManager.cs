@@ -10,7 +10,6 @@ public class ObjectManager : MonoBehaviour
     //Singleton reference
     public static ObjectManager instance;
 
-
     // Variables to check what objects were collected from minigames
     public bool musicBox = false;
     public bool kazoo = false;
@@ -23,20 +22,6 @@ public class ObjectManager : MonoBehaviour
     public bool cookies = false;
     public bool wine = false;
     public bool croissants = false;
-     
-
-    //public GameObject musicBoxObject;
-    //public Vector2 MusicBoxPos;
-    //public GameObject kazooSprite;
-    //public GameObject alarmClockSprite;
-
-     /*public GameObject rubikCubeSprite;
-     public GameObject butterflyBookSprite;
-     public GameObject stonehengePhotoSprite;
-
-     public GameObject cookiesSprite;
-     public GameObject wineSprite;
-     public GameObject croissantsSprite;*/
 
     //Variables to check if the player has selected a correct object
     public bool riverObject;
@@ -65,57 +50,17 @@ public class ObjectManager : MonoBehaviour
         }
         instance = this;
 
-        DontDestroyOnLoad(this.gameObject);
-
-        
-        
+        DontDestroyOnLoad(this.gameObject);    
     }
-
-    
 
     void Start()
     {
-        
-
-        //musicBoxObject.SetActive(false);
-        //kazooSprite.SetActive(false);
-        //alarmClockSprite.SetActive(false);
-
-        /*rubikCubeSprite.SetActive(false);
-        butterflyBookSprite.SetActive(false);
-        musicBoxSprite.SetActive(false);*/
-
-        //To disable the end button in the beginning of the game
-
-        //EndIsNearButton.SetActive(false);
-
-       
-
-        
-
-
-
         isEndNearDone = false;
-
     }
 
     void Update()
     {
         CheckObjects();
-        //CheckEnd();
-        //EndIsNear();
-
-        /*EndIsNearButton = GameObject.Find("EndButton");
-
-        if (riverGameOver && skyleGameOver && robinGameOver) 
-        {
-            EndIsNearButton.SetActive(true);
-        }
-
-        else 
-        {
-            EndIsNearButton.SetActive(false);
-        }*/
     }
 
     //This function checks if the selected object is the correct one or not
@@ -124,7 +69,6 @@ public class ObjectManager : MonoBehaviour
         if(musicBox == true) 
         {
             robinObject = true;
-            //Debug.Log("This is " + robinObject);
         }
 
         if(rubikCube == true) 
@@ -161,23 +105,4 @@ public class ObjectManager : MonoBehaviour
             SceneManager.LoadScene(10);
         }
     }
-
-    // Enables the end button if all minigames are over
-    /*public void EndIsNear() 
-    {
-        if (riverGameOver && skyleGameOver && robinGameOver) 
-        {
-            EndIsNearButton.SetActive(true);
-        }
-    }*/
-
-    //Makes sure to check if all minigames are over only once in update
-    /*public void CheckEnd()
-    {
-        if (isEndNearDone == false) 
-        {
-            EndIsNear();
-            isEndNearDone =true;
-        }
-    }*/
 }

@@ -11,7 +11,6 @@ public class InventoryUI : MonoBehaviour
     public GameObject kazooObject;
     public GameObject alarmClockObject;
 
-
     public GameObject rubikCubeObject;
     public GameObject butterflyBookObject;
     public GameObject stonehengePhotoObject;
@@ -19,7 +18,6 @@ public class InventoryUI : MonoBehaviour
     public GameObject cookieJarObject;
     public GameObject wineObject;
     public GameObject croissantsObject;
-
 
     void Start()
     {   
@@ -87,6 +85,5 @@ public class InventoryUI : MonoBehaviour
         {
             croissantsObject.SetActive(true);
         }
-
     }
 }

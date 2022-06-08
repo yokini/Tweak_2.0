@@ -24,14 +24,10 @@ public class WeaponMovement : MonoBehaviour
     void Update() 
     {
         itemRotate.transform.Rotate(0, 0, Time.deltaTime * rotationSpeed);
-
     }
 
     void OnTriggerEnter2D(Collider2D collider) 
     {
-        Debug.Log(collider.name);
-        
-
         if (collider.tag == "Enemy") 
         {
             Destroy(collider.gameObject);
@@ -41,10 +37,6 @@ public class WeaponMovement : MonoBehaviour
             {
                 Skyler_MinigameManager.Instance.score += 1;
             }
-
-            
         }
     }
-
-    
 }

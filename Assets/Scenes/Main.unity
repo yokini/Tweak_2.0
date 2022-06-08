@@ -1120,6 +1120,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8783107491445274655, guid: c3efcb109a7ed9e49a9958c3aa961625,
         type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.1573
+      objectReference: {fileID: 0}
+    - target: {fileID: 8783107491445274655, guid: c3efcb109a7ed9e49a9958c3aa961625,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.1573
+      objectReference: {fileID: 0}
+    - target: {fileID: 8783107491445274655, guid: c3efcb109a7ed9e49a9958c3aa961625,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.1573
+      objectReference: {fileID: 0}
+    - target: {fileID: 8783107491445274655, guid: c3efcb109a7ed9e49a9958c3aa961625,
+        type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -5092,7 +5107,6 @@ MonoBehaviour:
   riverGameOver: 0
   skyleGameOver: 0
   robinGameOver: 0
-  EndIsNearButton: {fileID: 0}
   isEndNearDone: 0
 --- !u!4 &1404470706
 Transform:
@@ -6322,6 +6336,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.y
       value: 263.441
+      objectReference: {fileID: 0}
+    - target: {fileID: 8783107491445274655, guid: 7f0c02e1f11a9fa4ebfdc6ff140f54e3,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.1573
+      objectReference: {fileID: 0}
+    - target: {fileID: 8783107491445274655, guid: 7f0c02e1f11a9fa4ebfdc6ff140f54e3,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.1573
+      objectReference: {fileID: 0}
+    - target: {fileID: 8783107491445274655, guid: 7f0c02e1f11a9fa4ebfdc6ff140f54e3,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3.1573
       objectReference: {fileID: 0}
     - target: {fileID: 8783107491445274655, guid: 7f0c02e1f11a9fa4ebfdc6ff140f54e3,
         type: 3}

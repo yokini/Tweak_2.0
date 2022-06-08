@@ -22,7 +22,6 @@ public class Skyler_MinigameManager : MonoBehaviour
         }
     }
 
-
     void Awake()  
     {
         _instance = this;
@@ -38,8 +37,6 @@ public class Skyler_MinigameManager : MonoBehaviour
     public Skyler_Timer timer;
 
     public int playerHealth;
-
-
 
     void Start()
     {
@@ -65,14 +62,10 @@ public class Skyler_MinigameManager : MonoBehaviour
         {
             winPanel.SetActive(true);
         }
-
-        Debug.Log(playerHealth);
     }
 
     public void LoadSkylerObject() 
     {
         SceneManager.LoadScene(12);
     }
-
-    
 }

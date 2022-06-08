@@ -8,7 +8,5 @@ public class LoadRiverGame : MonoBehaviour
     public void LoadRiverMiniGame() 
     {
         SceneManager.LoadScene(8);
-        Debug.Log("You are in River's minigame");
-        
     }
 }

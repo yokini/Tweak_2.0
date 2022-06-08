@@ -19,7 +19,6 @@ public class BgScroll : MonoBehaviour
     {   
         //Starting position of the background
         startPosition = new Vector3 (transform.position.x, transform.position.y, transform.position.z);
-        
     }
 
     // Update is called once per frame
@@ -32,9 +31,6 @@ public class BgScroll : MonoBehaviour
         if (transform.position.y > maximumHeight)
         {
             transform.position = startPosition;
-        }
-
-
-        
+        }   
     }
 }

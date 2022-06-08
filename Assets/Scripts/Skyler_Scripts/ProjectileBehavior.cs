@@ -6,21 +6,8 @@ public class ProjectileBehavior : MonoBehaviour
 {
     public float speed;
 
-    
-    
-
-
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        transform.position = transform.right * speed * Time.deltaTime;
-
-        
-        
+        transform.position = transform.right * speed * Time.deltaTime; 
     }
 }

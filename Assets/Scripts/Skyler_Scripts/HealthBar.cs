@@ -17,19 +17,11 @@ public class HealthBar : MonoBehaviour
     // Maximum health of the player
     private float maxHealth = 100f;
 
-    
-
     Skyler_MinigameManager miniGameManager;
 
-    
-    
     void Start()
     {
-        miniGameManager = FindObjectOfType<Skyler_MinigameManager>();
-        //healthBar = GetComponent<Image>();
-       
-        
-
+        miniGameManager = FindObjectOfType<Skyler_MinigameManager>();  
     }
     
 
@@ -41,6 +33,5 @@ public class HealthBar : MonoBehaviour
 
         //Change the fill amount according the current health of the player
         healthBar.fillAmount = currentHealth/maxHealth;
-
     }
 }

@@ -5,8 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class EndScenes : MonoBehaviour
 { 
-    
-
     public void EndingScenes() 
     {
         if (ObjectManager.instance.robinObject && ObjectManager.instance.riverObject && ObjectManager.instance.skylerObject) 

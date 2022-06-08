@@ -27,7 +27,6 @@ public class Enemy : MonoBehaviour
     //To increase the speed of the enemy after some time
     private float boostSpeed;
     
-    
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
@@ -35,7 +34,6 @@ public class Enemy : MonoBehaviour
         //Referencing the constant player position from the manager
         playerPos = Skyler_MinigameManager.Instance.player;
     }
-
     
     void Update()
     {   
@@ -45,18 +43,10 @@ public class Enemy : MonoBehaviour
 
         movement = direction;
 
-        
-
         if (ShouldChangeSpeed()) 
         {
             ChangeSpeed();
-            //Debug.Log(moveSpeed);
-
         }
-
-        
-         
-        
     }
 
     void FixedUpdate() 
@@ -75,9 +65,7 @@ public class Enemy : MonoBehaviour
     {
         boostSpeed = Time.time + boostSpeedDelay;
         moveSpeed += 1;
-
     }
-
     
     private bool ShouldChangeSpeed() 
     {
@@ -88,16 +76,10 @@ public class Enemy : MonoBehaviour
     //Decrease the player health by 10
     void OnTriggerEnter2D(Collider2D collider) 
     {
-        Debug.Log(collider.name);
-
         if (collider.tag == "Player") 
         {
             if (Skyler_MinigameManager.Instance.timer.currentTime > 0) 
             {
-                Debug.Log(collider.name);
-               
-                //Debug.Log(Skyler_MinigameManager.Instance.playerHealth);
-
                 if (Skyler_MinigameManager.Instance.playerHealth > 0 ) 
                 {
                      Skyler_MinigameManager.Instance.playerHealth -= 10;
@@ -107,11 +89,8 @@ public class Enemy : MonoBehaviour
                 {
                     Skyler_MinigameManager.Instance.playerHealth = 0;
                 }
-                Destroy(this.gameObject);
-                
+                Destroy(this.gameObject); 
             }
-
-            
         }
     }
 }

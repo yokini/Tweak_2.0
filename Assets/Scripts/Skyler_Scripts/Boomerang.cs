@@ -26,10 +26,6 @@ public class Boomerang : MonoBehaviour
     Vector3 mousePosition;
 
     Camera cam;
-
-
-
-
     
     void Start()
     {
@@ -46,20 +42,10 @@ public class Boomerang : MonoBehaviour
 
         screenBound = Camera.main.ScreenToWorldPoint (new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z ));
 
-        
-        
-
-        
-
         if (Input.GetMouseButtonDown(0)) 
         {
             StartCoroutine(Boom());
-
-            Debug.Log("Clicked " + mousePosition);
-        }
-
-        
-        
+        }    
     }
 
     IEnumerator Boom()
@@ -74,33 +60,11 @@ public class Boomerang : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-
         itemRotate.transform.Rotate(0, 0, Time.deltaTime * rotationSpeed);
 
         if (Input.GetMouseButtonDown(0))
         {
             transform.position = Vector3.MoveTowards(transform.position, locationInFrontOfPlayer, maximumDistance * Time.deltaTime);
         }
-
-        /*if (go)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, locationInFrontOfPlayer, maximumDistance * Time.deltaTime);
-        }
-
-        if (!go)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, locationOfPlayer, maximumDistance * Time.deltaTime);
-        }
-
-        if (!go && Vector3.Distance(player.transform.position, transform.position) < 1/2)
-        {
-            Destroy(this.gameObject);
-        }*/
-
-        
-        
     }
-
-   
 }

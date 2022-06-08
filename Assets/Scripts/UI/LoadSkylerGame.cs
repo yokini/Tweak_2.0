@@ -8,6 +8,5 @@ public class LoadSkylerGame : MonoBehaviour
     public void LoadSkylerMiniGame() 
     {
         SceneManager.LoadScene(9);
-        Debug.Log("You are in Skyler's minigame");
     }
 }

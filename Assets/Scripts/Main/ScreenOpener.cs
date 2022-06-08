@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ScreenOpener : MonoBehaviour
 {
+    //This screen sets active canvases in the main scene
+    
    public GameObject PanelOpen;
    public GameObject PanelClose;
 

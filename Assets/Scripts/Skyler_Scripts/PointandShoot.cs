@@ -25,15 +25,6 @@ public class PointandShoot : MonoBehaviour
        {
            Cursor.visible = true;
            crossHair.SetActive(false);
-       }
-
-
-
-        
-
-        
-
-       
+       } 
     }
-
 }

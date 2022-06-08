@@ -7,19 +7,12 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    //public Object musicBoxObject;
-
-    //public ObjectManager ObjectManager;
-
-   
-
     Clickable clickable;
 
     int currentScene;
 
     public static Inventory instance;
 
-    
     // Singleton
     void Awake()
     {
@@ -30,24 +23,10 @@ public class Inventory : MonoBehaviour
         }
         instance = this;
 
-        DontDestroyOnLoad(this.gameObject);
-        
+        DontDestroyOnLoad(this.gameObject);  
     }
-
-    
-    void Start()
-    {
-
-    }
-
-    
-    void Update()
-    {
-      
-    }
-
    
-    //Funtion to update the inventory in the main scene. It updates the inventory on the basis of what object was selected
+    //Function to update the inventory in the main scene. It updates the inventory on the basis of what object was selected
     //It also checks whether the minigame is finished by the player or not. 
     public void MoveOn( string tag, GameObject obj) 
     {
@@ -123,8 +102,6 @@ public class Inventory : MonoBehaviour
                 ObjectManager.instance.skyleGameOver = true;
                 Debug.Log("RobinGameOver");
             } 
-
         }
     }
-
 }

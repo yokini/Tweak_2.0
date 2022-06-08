@@ -15,7 +15,6 @@ public class Skyler_Timer : MonoBehaviour
     {
         startingTime = currentTime;
     }
-
     
     void Update()
     {
@@ -32,7 +31,5 @@ public class Skyler_Timer : MonoBehaviour
         {
             countdownText.color = Color.red;
         }
-
-        
     }
 }

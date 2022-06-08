@@ -14,12 +14,13 @@ public class Weapon : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
     }
+
     void Update()
-    {  if (Input.GetButtonDown("Fire1"))
-    {
-        Shoot();
-    }
-        
+    {  
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Shoot();
+        }    
     }
 
     private void Shoot()

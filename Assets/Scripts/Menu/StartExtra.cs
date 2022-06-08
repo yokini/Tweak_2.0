@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class StartExtra : MonoBehaviour
 {   
+    //Sets up button behavior on click
     public Image aboutGame;
 
     public void ChangeSceneStart()

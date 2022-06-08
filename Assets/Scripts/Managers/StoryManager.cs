@@ -21,8 +21,7 @@ public class StoryManager : MonoBehaviour
         }
         instance = this;
 
-        DontDestroyOnLoad(this.gameObject);
-        
+        DontDestroyOnLoad(this.gameObject);  
     }
 
     public void LoadRobinSalamander() 
@@ -51,8 +50,7 @@ public class StoryManager : MonoBehaviour
     public void LoadRiverMiniGame() 
     {
         SceneManager.LoadScene(8);
-        Debug.Log("You are in River's minigame");
-        
+        Debug.Log("You are in River's minigame");   
     }
 
     //Loads skyler minigame
@@ -61,10 +59,4 @@ public class StoryManager : MonoBehaviour
         SceneManager.LoadScene(9);
         Debug.Log("You are in Skyler's minigame");
     }
-
-    
-
-
-
-
 }

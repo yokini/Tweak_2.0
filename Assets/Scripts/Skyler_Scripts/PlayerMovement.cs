@@ -9,7 +9,6 @@ public class PlayerMovement : MonoBehaviour
     //How fast the player should rotate
     public float rotationSpeed;
 
-    
     public Transform playerTip;
 
     //position to where the player should rotate towards
@@ -29,19 +28,9 @@ public class PlayerMovement : MonoBehaviour
 
     public Rigidbody2D rb;
 
-    
-
-    
-
-    
-
-    
     void Start()
     {
-        
-
         rb = GetComponent<Rigidbody2D>(); 
-      
     }
 
     // Update is called once per frame
@@ -68,16 +57,10 @@ public class PlayerMovement : MonoBehaviour
             if (collider.tag == "Enemy") 
             {
                 Destroy(gameObject);
-                Debug.Log("Enemy hit");
             }
         }
-        
-
     }
 
-    
-
-      
     //Function to move the player in horizontal and vertical direction
      private void FixedUpdate() 
     {
