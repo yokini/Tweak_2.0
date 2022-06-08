@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Note : MonoBehaviour
 {
+    //This script sets up the note when the game is started
+    
     Rigidbody2D rb;
     public float speed;
     
@@ -14,10 +16,7 @@ public class Note : MonoBehaviour
 
     void Start()
     {
+        //Sets up the speed for the object from the start
         rb.velocity = new Vector2(0, -speed);
-    }
-
-    void Update()
-    {
     }
 }
