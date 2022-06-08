@@ -37,17 +37,7 @@ public class Inventory : MonoBehaviour
     
     void Start()
     {
-        //ObjectManager = FindObjectOfType<ObjectManager>();
 
-       
-
-        
-
-
-
-       
-
-        
     }
 
     
@@ -56,37 +46,7 @@ public class Inventory : MonoBehaviour
       
     }
 
-    /*public void JustMoveOnMusicBox() 
-    {
-        if (musicBoxButton.CompareTag("MusicBox")) 
-        {
-            SceneManager.LoadScene(0);
-            ObjectManager.musicBox = true;
-            ObjectManager.robinGameOver = true;
-        }
-    }
-
-    public void JustMoveOnKazoo() 
-    {
-         if (kazooButton.CompareTag("Kazoo")) 
-        {
-            SceneManager.LoadScene(0);
-            ObjectManager.kazoo = true;
-            ObjectManager.robinGameOver = true;
-        }
-    }
-
-    public void JustMoveOnAlarmClock() 
-    {
-
-         if (alarmClockButton.CompareTag("AlarmClock")) 
-        {
-            SceneManager.LoadScene(0);
-            ObjectManager.alarmClock = true;
-            ObjectManager.robinGameOver = true;
-        }
-    }*/
-    
+   
     //Funtion to update the inventory in the main scene. It updates the inventory on the basis of what object was selected
     //It also checks whether the minigame is finished by the player or not. 
     public void MoveOn( string tag, GameObject obj) 
@@ -161,17 +121,9 @@ public class Inventory : MonoBehaviour
             if (tag == "Cookies" || tag == "Wine" || tag == "Croissants" ) 
             {
                 ObjectManager.instance.robinGameOver = true;
-            }
-
-
-
-        
-
-            
+            } 
 
         }
     }
 
-   
-   
 }
