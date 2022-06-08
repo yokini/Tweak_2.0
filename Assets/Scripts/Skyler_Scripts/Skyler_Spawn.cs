@@ -8,7 +8,7 @@ public class Skyler_Spawn : MonoBehaviour
 
     public GameObject cloud;
 
-    private float spawnDelay = 1f;
+    private float spawnDelay = 0.5f;
 
     
 
