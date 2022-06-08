@@ -8,11 +8,17 @@ public class InventoryUI : MonoBehaviour
 
     //Reference to the all collectable objects in minigames
     public GameObject musicBoxObject;
+    public GameObject kazooObject;
+    public GameObject alarmClockObject;
 
 
     public GameObject rubikCubeObject;
+    public GameObject butterflyBookObject;
+    public GameObject stonehengePhotoObject;
 
     public GameObject cookieJarObject;
+    public GameObject wineObject;
+    public GameObject croissantsObject;
 
 
     void Start()
@@ -20,10 +26,16 @@ public class InventoryUI : MonoBehaviour
         //Disabling all Gameobjects in the slot when the main scene loads. 
         //These objects will be activated according to what player chooses in a minigame
         musicBoxObject.SetActive(false);
+        kazooObject.SetActive(false);
+        alarmClockObject.SetActive(false);
 
         rubikCubeObject.SetActive(false);
+        butterflyBookObject.SetActive(false);
+        stonehengePhotoObject.SetActive(false);
 
         cookieJarObject.SetActive(false);
+        wineObject.SetActive(false);
+        croissantsObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -36,14 +48,44 @@ public class InventoryUI : MonoBehaviour
             musicBoxObject.SetActive(true);
         }
 
+         if (ObjectManager.instance.kazoo) 
+        {
+            kazooObject.SetActive(true);
+        }
+
+         if (ObjectManager.instance.alarmClock) 
+        {
+            alarmClockObject.SetActive(true);
+        }
+
         if (ObjectManager.instance.rubikCube) 
         {
             rubikCubeObject.SetActive(true);
         }
 
+         if (ObjectManager.instance.butterflyBook) 
+        {
+            butterflyBookObject.SetActive(true);
+        }
+
+         if (ObjectManager.instance.stonehengePhoto) 
+        {
+            stonehengePhotoObject.SetActive(true);
+        }
+
         if (ObjectManager.instance.cookies) 
         {
             cookieJarObject.SetActive(true);
+        }
+
+         if (ObjectManager.instance.wine) 
+        {
+            wineObject.SetActive(true);
+        }
+
+         if (ObjectManager.instance.croissants) 
+        {
+            croissantsObject.SetActive(true);
         }
 
     }
