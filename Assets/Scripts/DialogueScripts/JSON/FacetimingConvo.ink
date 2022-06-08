@@ -1,8 +1,10 @@
 EXTERNAL Name(charName)
 //EXTERNAL Icon(charName)
+//EXTERNAL CharAnimation(charName, animationName)
 
 {Name("River")}
 //{Icon("River")}
+//{CharAnimation("River","RiverTalk")}
 Hey guys! I have something exciting to tell you! Are you ready?
 {Name("Skyler")}
 //{Icon("Skyler")}
@@ -30,7 +32,7 @@ Okay so first off, you absolutely hate water. Secondly, your number of “near�
 Oh no...
 {Name("River")}
 //{Icon("River")}
-Listen. Yes, alright. I’ve heard my brother’s friend bragging about finding a so-called monster there... And I...really wanna see it. To be fair, he came back alive right?? Trust me, I w-wouldn’t have asked you to join me if it was dangerous.
+Alright, listen. I’ve heard my brother’s friend Oly brag about finding a so-called monster there... And I really wanna see it. To be fair, he came back alive right? I w-wouldn’t have asked you to join me if it was dangerous.
 {Name("Robin")}
 //{Icon("Robin")}
 ... your brother refused to go with you, didn’t he?...

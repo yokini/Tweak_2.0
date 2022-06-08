@@ -9,6 +9,7 @@ public class DialogueScript : MonoBehaviour
 {
     [SerializeField]
     private TextAsset inkJsonFile;
+ 
     private Story storyScript;
 
     public TMP_Text dialogueText;
@@ -22,7 +23,9 @@ public class DialogueScript : MonoBehaviour
     public UIManagerScript UIScript;
     public GameObject DialogueBox;
 
-    //public Image characterIcon;
+
+
+
     void Start()
     {
         UIScript = FindObjectOfType<UIManagerScript>();
@@ -34,10 +37,11 @@ public class DialogueScript : MonoBehaviour
     {
         storyScript = new Story(inkJsonFile.text);
         storyScript.BindExternalFunction("Name", (string charName) => ChangeName(charName));
-        //storyScript.BindExternalFunction("Icon", (string charName) => ChangeCharacterIcon(charName));
-        storyScript.BindExternalFunction("CharAnimation", (string charName, string animName) => playCharacterAnim(charName, animName));
         DisplayNextLine();
+
+
     }
+
 
     public void DisplayNextLine()
     {
@@ -118,16 +122,5 @@ public class DialogueScript : MonoBehaviour
 
     }
 
-    //public void ChangeCharacterIcon(string name)
-    //{
-    //    var charIcon = Resources.Load<Sprite>("charactericons/" + name);
-    //    characterIcon.sprite = charIcon;
-    // }
-
-    public void playCharacterAnim(string charName, string animName)
-    {
-        GameObject character = GameObject.Find(charName);
-        character.GetComponent<CharacterAnimationScript>().CharacterAnimations(animName);
-    }
 
 }
