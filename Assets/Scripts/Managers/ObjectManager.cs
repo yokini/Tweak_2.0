@@ -49,7 +49,7 @@ public class ObjectManager : MonoBehaviour
     public bool robinGameOver;
 
     //Reference to the button which will pop up when all minigames are finished
-    public GameObject EndIsNearButton;
+    //public GameObject EndIsNearButton;
 
     //Variable to run the function only once in update
     public bool isEndNearDone;
@@ -103,7 +103,7 @@ public class ObjectManager : MonoBehaviour
     {
         CheckObjects();
         //CheckEnd();
-        EndIsNear();
+        //EndIsNear();
 
         /*EndIsNearButton = GameObject.Find("EndButton");
 
@@ -163,21 +163,21 @@ public class ObjectManager : MonoBehaviour
     }
 
     // Enables the end button if all minigames are over
-    public void EndIsNear() 
+    /*public void EndIsNear() 
     {
         if (riverGameOver && skyleGameOver && robinGameOver) 
         {
             EndIsNearButton.SetActive(true);
         }
-    }
+    }*/
 
     //Makes sure to check if all minigames are over only once in update
-    public void CheckEnd()
+    /*public void CheckEnd()
     {
         if (isEndNearDone == false) 
         {
             EndIsNear();
             isEndNearDone =true;
         }
-    }
+    }*/
 }
