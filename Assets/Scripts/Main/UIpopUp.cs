@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class UIpopUp : MonoBehaviour
 {
     public GameObject canvas;
-
     public GameObject chooseObject;
 
     void Start()
@@ -19,4 +18,7 @@ public class UIpopUp : MonoBehaviour
         canvas.SetActive(true);
         chooseObject.SetActive(false);
     }
+
+ 
+
 }
